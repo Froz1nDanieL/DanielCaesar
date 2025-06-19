@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Music.css">
+    <script defer src="./index.js"></script>
+    <script defer src="./Music.js"></script>
+    <title>Daniel's Music</title>
+</head>
+<body>
+    <div class="BG">
+        <!-- #region 头部 -->
+        <div class="Top">
+            <div class="Top-Nav Flexible">
+                <a id="TopLogo" href="Intro.html">DanielCaesar</a>
+                <ul class="Top-Nav-List Flexible">
+		            <li><a id="NavText" href="https://www.danielcaesar.com/" target="_blank">Offitial</a></li>
+		            <li><a id="NavText" href="News.html">news</a></li>
+		            <li><a id="NavText" href="ACHV.html">ACHV</a></li>
+		            <li><a id="NavText" href="Music.html">music</a></li>
+					<li><a id="NavText" href="shop.html">shop</a></li>
+		        </ul>
+            </div>
+            <div class="TopMain Flexible">
+                <div id="b1" class="Top-Banner Flexible">
+                    <img class="BannerImg" src="./img/NeverEnough.jpg" alt="">
+                    <div class="ShortIntro">Never Enough</div>
+                    <a href="NeverEnough.html" class="RelaLink">Listen To The Album</a>
+                </div>
+                <div id="b2" class="Top-Banner Flexible">
+                    <img class="BannerImg" src="./img/Case Study.png" alt="">
+                    <div class="ShortIntro">Case Study 01</div>
+                    <a href="CaseStudy01.html" class="RelaLink">Listen To The Album</a>
+                </div>
+                <div id="b3" class="Top-Banner Flexible">
+                    <img class="BannerImg" src="./img/Freudian.jpg" alt="">
+                    <div class="ShortIntro">Freudian</div>
+                    <a href="Freudian.html" class="RelaLink">Listen To The Album</a>
+                </div>
+                <div id="b4" class="Top-Banner Flexible">
+                    <img class="BannerImg" src="./img/pilgrim-paradise.jpg" alt="">
+                    <div class="ShortIntro">Pilgrim's Paradise</div>
+                    <a href="PilgrimsParadise.html" class="RelaLink">Listen To The Album</a>
+                </div>
+            </div>
+            <button id="prev-btn" class="prev-btn">‹</button>
+            <button id="next-btn" class="next-btn">›</button>
+        </div>
+        <!-- #endregion 头部 -->
+        <!-- #region 音乐 -->
+        <!-- <div id="music" class="Music1 Flexible">
+            <div class="container">
+                <div class="AlbumList Flexible">
+                    <div class="Album Flexible">
+                        <img src="./img/NeverEnough.jpg" alt="">
+                        <div class="AlbumInfo Flexible">
+                            <h1>Never Enough</h1>
+                            <p>"a cohesive display of genre experimentation that cements Caesar's place as one of the smartest and most talented artists in today's constantly mutating R&B pantheon."</p>
+                        </div>
+                    </div>
+                    <ul id="music-list" class="music-list Flexible">
+                        <li><div>#Always</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Always--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Let Me Go</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Let Me Go--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Toronto 2014</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Toronto2014--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Buyer's Remorse</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Buyer's Remorse--Daniel Caesar.m4a" preload="auto"></audio></li>
+                    </ul>
+                </div>
+                <div class="AlbumList Flexible">
+                    <div class="Album Flexible">
+                        <img src="./img/Case Study.png" alt="">
+                        <div class="AlbumInfo Flexible">
+                            <h1>Case Study 01</h1>
+                            <p>"it's a solid effort by an artist who is, more or less, still a rookie, attempting to diversify his sound early on in order to avoid cementing himself into gospel music for the entirety of his career."</p>
+                        </div>
+                    </div>
+                    <ul id="music-list" class="music-list Flexible">
+                        <li><div>#CYANIDE</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/CYANIDE--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#SUPERPOSITION</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/SUPERPOSITION--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#COMPLEXITIES</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/COMPLEXITIES--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#OPEN UP</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/OPEN UP--Daniel Caesar.m4a" preload="auto"></audio></li>
+                    </ul>
+                </div>
+                <div class="AlbumList Flexible">
+                    <div class="Album Flexible">
+                        <img src="./img/Freudian.jpg" alt="">
+                        <div class="AlbumInfo Flexible">
+                            <h1>Freudian</h1>
+                            <p>"not an album of sweeping gestures, but rather an ambling, pleasant account of a 20-something falling in and out of love. It's full of small moments, nuance and detail."</p>
+                        </div>
+                    </div>
+                    <ul id="music-list" class="music-list Flexible">
+                        <li><div>#Best Part</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Best Part--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Get You</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Get You--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Hold Me Down</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Hold Me Down--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Blessed</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Blessed--Daniel Caesar.m4a" preload="auto"></audio></li>
+                    </ul>
+                </div>
+                <div class="AlbumList Flexible">
+                    <div class="Album Flexible">
+                        <img src="./img/pilgrim-paradise.jpg" alt="">
+                        <div class="AlbumInfo Flexible">
+                            <h1>Pilgrim's Paradise</h1>
+                            <p>"Daniel's sophomore effort, Pilgrim's Paradise serves as a continuation of his previous 2014 release, Praise Break."</p>
+                        </div>
+                    </div>
+                    <ul id="music-list" class="music-list Flexible">
+                        <li><div>#Street Car</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Street Car--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Paradise</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Paradise--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Little Rowboat</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Little Rowboat--Daniel Caesar.m4a" preload="auto"></audio></li>
+                        <li><div>#Death&amp;Taxes</div> <img class="PlayKey" src="./img/播放器_播放.svg" alt=""><audio class="listAudio" src="./audio/Death&amp;Taxes--Daniel Caesar.m4a" preload="auto"></audio></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div> -->
+        <div class="Music2">
+            <div class="SingleList">
+                <div class="Single">
+                    <img src="./img/S.horsepower.jpg" alt="">
+                    <div>
+                        <div class="Info">Horse power</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/Horsepower.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+                <div class="Single">
+                    <img src="./img/S.Peaches.png" alt="">
+                    <div>
+                        <div class="Info">Peaches</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/Peaches.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+                <div class="Single">
+                    <img src="./img/S.TAWY.png" alt="">
+                    <div>
+                        <div class="Info">Time Alone With You</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/TAWY.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+                <div class="Single">
+                    <img src="./img/news4.png" alt="">
+                    <div>
+                        <div class="Info">Waiting In Vain</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/Wait In Vain.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+                <div class="Single">
+                    <img src="./img/news1.jpg" alt="">
+                    <div>
+                        <div class="Info">Rearrange My World</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/Rearrange My World.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+                <div class="Single">
+                    <img src="./img/S.JapaneseDenim.jpg" alt="">
+                    <div>
+                        <div class="Info">Japanese Denim</div>
+                        <div class="PlayKey">Play</div>
+                        <audio class="listAudio" src="./audio/Japanese Denim.m4a" preload="auto"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion 音乐 -->
+        <!-- #region 视频 -->
+        <div class="VideoContainer">
+            <div class="VideoGrid">
+                <div class="VideoItem">
+                    <img src="./img/v1.png" alt="Best Part">
+                    <div class="VideoInfo">
+                        <div class="Info">Best Part</div>
+                        <div class="PlayKey">Play</div>
+                    </div>
+                    <video class="videoSRC" src="./video/Best Part.mp4"></video>
+                </div>
+                <div class="VideoItem">
+                    <img src="./img/v2.png" alt="Let Me Go">
+                    <div class="VideoInfo">
+                        <div class="Info">Let Me Go</div>
+                        <div class="PlayKey">Play</div>
+                    </div>
+                    <video class="videoSRC" src="./video/Let Me Go.mp4"></video>
+                </div>
+                <div class="VideoItem">
+                    <img src="./img/v3.png" alt="Toronto 2014">
+                    <div class="VideoInfo">
+                        <div class="Info">Toronto 2014</div>
+                        <div class="PlayKey">Play</div>
+                    </div>
+                    <video class="videoSRC" src="./video/Toronto 2014.mp4"></video>
+                </div>
+                <div class="VideoItem">
+                    <img src="./img/v4.png" alt="Valentina">
+                    <div class="VideoInfo">
+                        <div class="Info">Valentina</div>
+                        <div class="PlayKey">Play</div>
+                    </div>
+                    <video class="videoSRC" src="./video/Valentina.mp4"></video>
+                </div>
+            </div>
+        </div>
+        <div id="fullscreen-video-container" class="fullscreen-video-container">
+            <video id="fullscreen-video" controls></video>
+            <button id="close-video-btn" class="close-video-btn">Close</button>
+        </div>
+        <!-- #endregion 视频 -->
+    </div>
+</body>
+</html>

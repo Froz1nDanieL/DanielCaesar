@@ -1,0 +1,162 @@
+.Top
+{
+    width: 100%;
+    background-color: white;
+}
+.Top-Nav
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    background: none;
+    justify-content:space-between;
+    z-index: 100;
+    transition: background-color 0.3s ease-in;
+}
+.Top-Nav.scrolled
+{
+    background-color: rgb(245,245,245);
+    backdrop-filter: blur(5px);
+}
+#TopLogo
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 20%;
+    font-family: "TitleText1";
+    font-size: calc(1.5vh + 1vw);
+    line-height: 8vh;
+    text-align: center;
+    border: none;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+#TopLogo.scrolled
+{
+    color: rgb(0, 0, 0);
+}
+.Top-Nav-List 
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 30%;
+    height: 100%;
+    justify-content: space-evenly;
+    background: none;
+}
+.Top-Nav-List li
+{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#NavText
+{
+    line-height: calc(0.5vh + 0.4vw);
+    height: auto;
+    font-size: calc(0.5vh + 0.4vw);
+    font-family: "TitleText3";
+    color: black;
+    transition: all 0.3s ease-in;
+    border-bottom: 2px solid transparent;
+}
+#NavText.scrolled
+{
+    color: rgb(0, 0, 0) !important;
+}
+#NavText.scrolled:hover
+{
+    border-bottom: 2px solid black;
+}
+#NavText:hover
+{
+    border-bottom: 2px solid black;
+}
+.DClogo
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.DClogo .name
+{
+    font-size: calc(4vh + 20vw);
+    font-family: "TitleText2";
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    color: black;
+}
+.DClogo img
+{
+    animation: fadeIn1 1.2s ease-in forwards;
+    filter: brightness(0.5);
+    filter: blur(5px);
+    min-height: 80%;
+    max-width: 90%;
+    aspect-ratio: 1/1;
+    opacity: 0;
+}
+/* #region 新闻 */
+#news 
+{
+    scroll-margin-top: 8vh;
+}
+.News
+{
+    justify-content: space-around;
+    align-items: start;
+    background-color: white;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.NewsContent
+{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2vh;
+    align-items: center;
+    background-color: #fff;
+    margin: 5vh 2vw;
+}
+.NewsType
+{
+    font-family: "btnFont";
+    font-size: calc(1.5vh + 1vw);
+}
+.NewsImg
+{
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+}
+.NewsText
+{
+    width: 80%;
+    color: rgb(100,100,100);
+    text-align: center;
+    font-size: calc(0.8vh + 0.6vw);
+    font-family: "NormalText";
+}
+.NewsContent a
+{
+    text-align: center;
+    line-height: 3vh;
+    border: 1px solid rgb(200,200,200);
+    width: 50%;
+    color: black;
+    font-family: "Titletext3";
+    transition: all 0.3s ease-in;
+}
+.NewsContent a:hover
+{
+    background-color: rgb(200,200,200);
+}
+/* #endregion 新闻 */

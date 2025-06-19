@@ -1,0 +1,480 @@
+/*#region 头部*/
+.Top
+{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.Top-Nav
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    background: none;
+    justify-content:space-between;
+    z-index: 100 !important;
+    transition: background-color 0.3s ease-in;
+}
+.Top-Nav.scrolled 
+{
+    background-color: rgb(245,245,245);
+    backdrop-filter: blur(5px);
+}
+#TopLogo
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 20%;
+    font-family: "TitleText1";
+    font-size: calc(1.5vh + 1vw);
+    line-height: 8vh;
+    text-align: center;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+#TopLogo.scrolled
+{
+    color: rgb(0, 0, 0);
+}
+.Top-Nav-List 
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 30%;
+    height: 100%;
+    justify-content: space-evenly;
+    background: none;
+}
+.Top-Nav-List li
+{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#NavText
+{
+    line-height: calc(0.5vh + 0.4vw);
+    height: auto;
+    font-size: calc(0.5vh + 0.4vw);
+    font-family: "TitleText3";
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in;
+    border-bottom: 2px solid transparent;
+}
+#NavText.scrolled
+{
+    color: rgb(0, 0, 0) !important;
+}
+#NavText.scrolled:hover
+{
+    border-bottom: 2px solid black;
+}
+#NavText:hover
+{
+    border-bottom: 2px solid white;
+}
+.TopMain {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.Top-Banner
+{
+    will-change: opacity;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), 
+    z-index 0.5s linear;
+}
+#b1
+{
+    animation: fadeIn2 1.5s ease-in forwards;
+    background-image: url("./img/Run.gif");
+    opacity: 0;
+}
+#b2
+{
+    background-image: url("./img/toronto14.gif");
+}
+#b3
+{
+    background-image: url("./img/dylm.gif");
+}
+.ShortIntro
+{
+    width: 70%;
+    text-align: center;
+    font-family: "TitleText2";
+    font-size: calc(6vh + 5vw);
+    color: white;
+}
+.RelaLink
+{
+    font-family: "TitleText3";
+    font-size: calc(1vh + 0.8vw);
+    border: 2px solid white;
+    padding: 1% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in;
+}
+.RelaLink:hover
+{
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+.Top-Banner, .ShortIntro, .RelaLink {
+    transition: all 0.5s ease-in-out;
+}
+.prev-btn, .next-btn 
+{
+    font-family: "TitleText2";
+    font-size: calc(5vh + 1.5vw);
+    height: 10%;
+    width: 5%;
+    margin: 0 2vw;
+    position: absolute;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-btn {
+    left: 0px;
+}
+.next-btn {
+    right: 0px;
+}
+/* #endregion 头部 */
+/* #region 介绍 */
+.Intro
+{
+    margin: 0  auto;
+    margin-top: 10vh;
+    height: 100vh;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: start;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.Intro.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Intro #Text-Title
+{
+    font-size: calc(6vh + 4vw);
+    font-family: "TitleText2";
+    color: black;
+    margin: 0;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid black;
+}
+.Intro .Text
+{
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: start;
+    height: 90vh;
+    width: 60%;
+    background-color: white;
+}
+.Intro .Text p
+{
+    text-align: left;
+    font-family: "NormalText";
+    font-size: calc(1vh + 0.8vw);
+    color: #333;
+    margin-top: 5vh;
+    transition: opacity 0.5s ease-out;
+}
+.Intro .introIMG
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+
+}
+.Intro .introIMG img
+{
+    height: 70%;
+    filter: blur(10px);
+    transition: all 0.7s ease-out;
+    cursor: pointer;
+}
+.Intro .introIMG img:hover {
+    filter: blur(0px);
+}
+.intro-tip {
+    width: 100%;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: calc(3vh + 2vw);
+    color: #666;
+    font-family: "TitleText2";
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+/* #endregion 介绍 */
+
+/* #region 音乐风格 */
+.MusicStyleWrapper {
+    margin: 0 auto;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.MusicTitleArea {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.MusicStyle {
+    height: 100vh;
+    width: 80%;
+    position: relative;
+}
+
+.RNB, .Souls, .Gospel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 70%;
+    border-radius: 0;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.RNB {
+    top: 0;
+    z-index: 3;
+    width: 85%;
+    height: 70%;
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    border: 1vh solid #000000;
+}
+.Souls {
+    top: 8vh;
+    z-index: 2;
+    width: 80%;
+    height: 65%;
+    transform: translateX(-50%) scale(0.96) translateY(12px);
+    opacity: 0.7;
+    border: 1vh solid #000000;
+}
+.Gospel {
+    top: 16vh;
+    z-index: 1;
+    width: 75%;
+    height: 60%;
+    transform: translateX(-50%) scale(0.92) translateY(24px);
+    opacity: 0.5;
+    border: 1vh solid #000000;
+}
+
+
+.styleIMG {
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.styleIMG img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.styleInfo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 4vh 3vw;
+    background: none;
+}
+
+.rnbTitle, .soulTitle, .gospelTitle {
+    font-size: calc(4vh + 3vw);
+    font-family: "TitleText2";
+    color: #333;
+}
+
+.rnbInfo, .soulInfo, .gospelInfo {
+    font-size: calc(1.2vh + 0.6vw);
+    color: #666;
+    font-family: "NormalText";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.rnbInfo p, .soulInfo p, .gospelInfo p {
+    margin-bottom: 1.5vh;
+}
+
+.rnbInfo ul, .soulInfo ul, .gospelInfo ul {
+    list-style: disc;
+    margin-left: 2vw;
+}
+
+.rnbInfo li, .soulInfo li, .gospelInfo li {
+    margin-bottom: 0.8vh;
+}
+
+.MusicTitle {
+    font-family: "TitleText3";
+    writing-mode: sideways-lr;
+    font-size: calc(12vh + 8vw);
+    color: #000000;
+    text-align: center;
+    text-decoration: underline 10px #000000;
+}
+/* #endregion 音乐风格 */
+
+/* #region GLORY */
+
+.GloryWrapper{
+    margin: 0 auto;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.GloryTitleArea {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.GloryTitle {
+    font-family: "TitleText3";
+    writing-mode: sideways-rl;
+    font-size: calc(12vh + 8vw);
+    color: #000000;
+    text-align: center;
+    text-decoration: underline 10px #000000;
+}
+.GloryShow{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+.glory-card {
+    border: 1vh solid #000;
+    box-sizing: border-box;
+    width: 30vw;
+    aspect-ratio: 8/5;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.glory-card img {
+    width: 55%;
+    height: 90%;
+    aspect-ratio: 8/5;
+    object-fit: cover;
+    margin: 0 0 0 2vw;
+}
+.glory-desc {
+    margin: 0 2vw 0 2vw;
+    font-size: calc(1.2vh + 1vw);
+    color: #222;
+    text-align: left;
+    font-family: "TitleText2";
+    width: 40%;
+}
+.GloryCardWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 3vw;
+    flex-wrap: wrap;
+}
+.GloryBtnArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.glory-btn {
+    padding: 1vh 3vw;
+    font-size: calc(1.2vh + 1vw);
+    border: 4px solid #000;
+    background: #fff;
+    color: #000;
+    font-family: "TitleText2";
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.glory-btn:hover {
+    background: #000;
+    color: #fff;
+}
+/* #endregion GLORY */

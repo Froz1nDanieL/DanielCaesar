@@ -1,0 +1,716 @@
+/*#region 头部*/
+.Top {
+  width: 100%;
+  height: 100vh;
+}
+.Top-Nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8%;
+  background: none;
+  justify-content: space-between;
+  z-index: 100;
+  transition: background-color 0.3s ease-in;
+}
+.Top-Nav.scrolled {
+  background-color: rgb(245, 245, 245);
+  backdrop-filter: blur(5px);
+}
+#TopLogo {
+  margin: 0 calc(1vh + 1vw);
+  width: 20%;
+  font-family: "TitleText1";
+  font-size: calc(1.5vh + 1vw);
+  line-height: 8vh;
+  text-align: center;
+  border: none;
+  color: black;
+  transition: all 0.3s ease-in;
+}
+.Top-Nav-List {
+  margin: 0 calc(1vh + 1vw);
+  width: 30%;
+  height: 100%;
+  justify-content: space-evenly;
+  background: none;
+}
+.Top-Nav-List li {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#NavText {
+  line-height: calc(0.5vh + 0.4vw);
+  height: auto;
+  font-size: calc(0.5vh + 0.4vw);
+  font-family: "TitleText3";
+  color: black;
+  transition: all 0.3s ease-in;
+  border-bottom: 2px solid transparent;
+}
+#NavText.scrolled {
+  color: rgb(0, 0, 0) !important;
+}
+#NavText.scrolled:hover {
+  border-bottom: 2px solid black;
+}
+#NavText:hover {
+  border-bottom: 2px solid black;
+}
+.TopMain {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.Top-Banner {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  opacity: 0;
+}
+#b1 {
+  opacity: 1;
+  z-index: 1;
+}
+.BannerImg {
+  width: 30%;
+  height: auto;
+}
+.ShortIntro {
+  width: 70%;
+  text-align: center;
+  font-family: "TitleText2";
+  font-size: calc(3vh + 2vw);
+  letter-spacing: 0.2vw;
+  color: white;
+}
+.RelaLink {
+  font-family: "TitleText3";
+  font-size: calc(1vh + 0.8vw);
+  border: 2px solid #666;
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-out;
+}
+.RelaLink:hover {
+  background-color: rgba(100, 100, 100, 0.7);
+  backdrop-filter: blur(10px);
+}
+.Top-Banner,
+.ShortIntro,
+.RelaLink {
+  transition: all 0.5s ease-in-out;
+}
+.prev-btn,
+.next-btn {
+  font-family: "TitleText2";
+  font-size: calc(5vh + 1.5vw);
+  height: 10%;
+  width: 5%;
+  margin: 0 2vw;
+  position: absolute;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prev-btn {
+  left: 0px;
+}
+.next-btn {
+  right: 0px;
+}
+/* #endregion 头部 */
+.BG {
+  background-color: white;
+}
+.Music1 {
+  scroll-margin-top: 8vh;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vh 0;
+}
+/* #region 专辑 */
+/* .container {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vw 0;
+}
+.AlbumList {
+  background-color: rgb(20, 20, 20);
+  max-width: 90vw;
+  width: 700px;
+  height: 60vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Album {
+  width: 90%;
+  height: 40vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.Album img {
+  max-width: 40%;
+  max-height: 85%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.AlbumInfo {
+  width: 45%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.AlbumInfo h1 {
+  color: white;
+  text-align: center;
+  font-size: calc(1.2vh + 1vw);
+  font-family: "TitleText3";
+}
+.AlbumInfo p {
+  color: white;
+  text-align: center;
+  font-size: calc(0.8vh + 0.6vw);
+  font-family: "NormalText";
+}
+.music-list {
+  width: 90%;
+  height: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1vh;
+}
+.music-list li {
+  font-size: calc(0.8vh + 0.6vw);
+  font-family: "TitleText3";
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  letter-spacing: 0.8vh;
+  height: 15%;
+  width: 90%;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 90%
+  );
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+.music-list li:hover {
+  background-color: black;
+}
+.music-list li div {
+  margin-left: 2vw;
+}
+.music-list li .PlayKey {
+  background-color: none !important;
+  margin-right: 2vw;
+  height: calc(1vh + 0.8vw);
+} */
+/* #endregion专辑 */
+/* #region 单曲 */
+.Music2 {
+  height: 120vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SingleList {
+  width: 80%;
+  max-height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3.5vw;
+  aspect-ratio: 4/3;
+  transition: all 0.3s ease-in;
+}
+.Single {
+  max-width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+.Single:nth-child(1) {
+  grid-area: 1/1/7/8;
+}
+.Single:nth-child(2) {
+  grid-area: 1/8/9/13;
+  flex-direction: column;
+}
+.Single:nth-child(3) {
+  grid-area: 7/1/13/4;
+  flex-direction: column;
+}
+.Single:nth-child(4) {
+  grid-area: 7/4/10/8;
+}
+.Single:nth-child(5) {
+  grid-area: 10/4/13/8;
+}
+.Single:nth-child(6) {
+  grid-area: 9/8/13/13;
+}
+/* #region 单曲1 */
+.Single .PlayKey {
+  color: #666 !important;
+  border: 2px solid #666 !important;
+}
+.Single:nth-child(1) img {
+  max-width: 60%;
+  max-height: 70%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Single:nth-child(1) div {
+  width: 40%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.Single:nth-child(1) div .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(1.2vh + 2.8vw);
+}
+.Single:nth-child(1) div .PlayKey {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-family: "btnFont";
+  font-size: calc(0.6vh + 1.8vw);
+  border: 2px solid rgb(200, 200, 200);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+/* #endregion 单曲1 */
+/* #region 单曲2 */
+.Single:nth-child(2) img {
+  max-width: 60%;
+  max-height: 40%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Single:nth-child(2) div {
+  max-width: 80%;
+  height: 40%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.Single:nth-child(2) div .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  text-align: center;
+  width: 100%;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(1vh + 3vw);
+}
+.Single:nth-child(2) div .PlayKey {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-family: "btnFont";
+  font-size: calc(0.6vh + 1.8vw);
+  border: 2px solid rgb(200, 200, 200);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+/*#endregion 单曲2 */
+/* #region 单曲3 */
+.Single:nth-child(3) img {
+  max-width: 60%;
+  max-height: 40%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Single:nth-child(3) div {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.Single:nth-child(3) div .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(0.6vh + 1.4vw);
+}
+.Single:nth-child(3) div .PlayKey {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-family: "btnFont";
+  font-size: calc(0.6vh + 1.8vw);
+  border: 2px solid rgb(200, 200, 200);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+/*#endregion 单曲3 */
+/* #region 单曲45 */
+.Single:nth-child(4) img,
+.Single:nth-child(5) img {
+  max-width: 60%;
+  max-height: 70%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Single:nth-child(4) div,
+.Single:nth-child(5) div {
+  width: 40%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.Single:nth-child(4) div .Info,
+.Single:nth-child(5) div .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(0.4vh + 1vw);
+}
+.Single:nth-child(4) div .PlayKey,
+.Single:nth-child(5) div .PlayKey {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-family: "btnFont";
+  font-size: calc(0.4vh + 1vw);
+  border: 2px solid rgb(200, 200, 200);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+/* #endregion 单曲45 */
+/* #region 单曲6 */
+.Single:nth-child(6) img {
+  max-width: 60%;
+  max-height: 70%;
+  aspect-ratio: 1/1;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.Single:nth-child(6) div {
+  width: 40%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.Single:nth-child(6) div .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(0.5vh + 1.6vw);
+}
+.Single:nth-child(6) div .PlayKey {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  font-family: "btnFont";
+  font-size: calc(0.4vh + 1.2vw);
+  border: 2px solid rgb(200, 200, 200);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+/* #endregion 单曲6 */
+.Single div .PlayKey:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.SingleList:hover .Single:not(:hover) {
+  filter: blur(5px);
+}
+.SingleList .Single:hover {
+  z-index: 1;
+}
+/* #endregion 单曲 */
+/* #region 视频 */
+.VideoContainer {
+  width: 100%;
+  padding: 7vw 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VideoGrid {
+  width: 80%;
+  max-height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3.5vw;
+  transition: all 0.3s ease-in;
+}
+
+.VideoItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.VideoItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in;
+}
+
+.VideoInfo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-out;
+}
+
+.VideoInfo.expanded {
+  width: 100%;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.VideoInfo.expanded .Info {
+  font-size: calc(1.2vh + 1.2vw);
+  margin-bottom: 3.5vw;
+}
+
+.VideoInfo.expanded .PlayKey {
+  width: 50%;
+  font-size: calc(0.6vh + 1vw);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.VideoInfo .Info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2.6vw;
+  color: #666;
+  font-family: "TitleText3";
+  font-size: calc(1vh + 1vw);
+  transition: all 0.5s ease-out;
+}
+
+.VideoInfo .PlayKey {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5vw;
+  text-align: center;
+  color: #666;
+  font-family: "btnFont";
+  font-size: calc(0.4vh + 0.8vw);
+  border: 2px solid #666;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+}
+.VideoInfo .PlayKey:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.VideoGrid:hover .VideoItem:not(:hover) {
+  filter: blur(5px);
+}
+.VideoGrid .VideoItem:hover {
+  z-index: 1;
+}
+
+.videoSRC {
+  display: none;
+}
+
+.fullscreen-video-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-video-container video {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.close-video-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 2px solid white;
+  padding: 8px 16px;
+  cursor: pointer;
+  z-index: 1001;
+  font-family: "TitleText3";
+  font-size: calc(0.4vh + 0.6vw);
+  transition: all 0.3s ease-in;
+}
+
+.close-video-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* #endregion 视频 */
+body,
+.BG,
+.Music1,
+.AlbumList,
+.AlbumInfo h1,
+.AlbumInfo p,
+.music-list li,
+.music-list li .PlayKey,
+.ShortIntro,
+.RelaLink,
+.TopTitle,
+.TopText,
+.SingleList,
+.Single:nth-child(1) div .Info,
+.Single:nth-child(2) div .Info,
+.Single:nth-child(3) div .Info,
+.Single:nth-child(4) div .Info,
+.Single:nth-child(5) div .Info,
+.VideoInfo .Info,
+.VideoInfo .PlayKey,
+.VideoInfo,
+.VideoInfo.expanded,
+.prev-btn,
+.next-btn {
+  color: #666 !important;
+}

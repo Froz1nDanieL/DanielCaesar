@@ -1,0 +1,373 @@
+/* #region 头部 */
+.Top
+{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+.Top-Nav
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    background: none;
+    justify-content:space-between;
+    z-index: 100;
+    transition: background-color 0.3s ease-in;
+}
+.Top-Nav.scrolled
+{
+    background-color: rgb(245,245,245);
+    backdrop-filter: blur(5px);
+}
+#TopLogo
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 20%;
+    font-family: "TitleText1";
+    font-size: calc(1.5vh + 1vw);
+    line-height: 8vh;
+    text-align: center;
+    border: none;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+#TopLogo.scrolled
+{
+    color: rgb(0, 0, 0);
+}
+.Top-Nav-List 
+{
+    margin: 0 calc(1vh + 1vw);
+    width: 30%;
+    height: 100%;
+    justify-content: space-evenly;
+    background: none;
+}
+.Top-Nav-List li
+{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#NavText
+{
+    line-height: calc(0.5vh + 0.4vw);
+    height: auto;
+    font-size: calc(0.5vh + 0.4vw);
+    font-family: "TitleText3";
+    color: black;
+    transition: all 0.3s ease-in;
+    border-bottom: 2px solid transparent;
+}
+#NavText.scrolled
+{
+    color: rgb(0, 0, 0) !important;
+}
+#NavText.scrolled:hover
+{
+    border-bottom: 2px solid black;
+}
+#NavText:hover
+{
+    border-bottom: 2px solid black;
+}
+.DClogo
+{
+    position: relative;
+    height: calc(40vw + 40vh);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.DClogo .name
+{
+    font-size: calc(4vh + 20vw);
+    font-family: "TitleText2";
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    color: black;
+}
+.DClogo img
+{
+    animation: fadeIn1 1.2s ease-in forwards;
+    filter: brightness(0.5);
+    filter: blur(5px);
+    min-height: 80%;
+    max-width: 90%;
+    aspect-ratio: 1/1;
+    opacity: 0;
+}
+/* #endregion 头部 */
+/* #region 格莱美 */
+.Grammy
+{
+    background-color: white;
+}
+.Grammy .Title
+{
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+.Grammy .Title img
+{
+    height: 80%;
+    max-width: 40%;
+    filter: brightness(0) invert(0);
+}
+.Grammy .Title .Text
+{
+    font-size: calc(1vh + 5vw);
+    font-family: "TitleText3";
+    color: #000 !important;
+}
+.sum
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: left;
+    width: 95%;
+    font-size: calc(0.4vh + 1.6vw);
+    color: rgb(200,200,200);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+}
+.sum strong
+{
+    font-size: calc(0.4vh + 1.6vw);
+    color: rgb(100,100,100);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.ChartBG
+{
+    padding: 5vh 0;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(240,240,240);
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1vh solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.G_chart
+{
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(240,240,240);
+}
+.Award-List
+{
+    outline: 0.1vh solid rgb(200,200,200);
+    cursor: pointer;
+    color: rgb(100,100,100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "TitleText3";
+    width: 95%;
+    height: calc(10vh + 5vw);
+    transition: color 0.3s ease-in,background-color 0.3s ease-in;
+    margin: 0 auto;
+}
+.Award-List.active
+{
+    background-color: white;
+    color: black;
+    outline: none;
+}
+.Award-List:hover
+{
+    background-color:white;
+}
+.Award-List h2
+{
+    width: 40%;
+    font-size: calc(0.4vh + 1.6vw);
+}
+.Award-List img
+{
+    width: calc(0.4vh + 1vw);
+    margin: 0 calc(2vh + 1vw);
+}
+.Award-List img.active
+{
+    transform: scaleY(-1);
+}
+.Award-All {
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), opacity 1s;
+}
+.Award-All.active {
+    max-height: 2000px;
+    opacity: 1;
+}
+.Award-All hr
+{
+    background-color: rgb(200, 200, 200);
+    border: none;
+    height: 0.1vh;
+    width: 60%;
+    margin: 0 auto;
+}
+.Award-All .Nominated
+{
+    color: rgb(100,100,100);
+    font-family: "TitleText3";
+    font-size: calc(1vh + 1vw);
+    width: 95%;
+    margin: 3vh auto;
+    text-align: center;
+}
+.Wins
+{
+    color: rgb(178,148,71);
+    font-family: "TitleText3";
+    font-size: calc(1.5vh + 1.5vw);
+    width: 95%;
+    margin: 3vh auto;
+    text-align: center;
+}
+.Award-Content
+{
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.Gram
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 60%;
+}
+.Gram img
+{
+    height: calc(10vh + 10vw);
+}
+.Gram .Gram-Content
+{
+    width: 50%;
+}
+.Gram-Content .Gram-Type
+{
+    font-family: "TitleText3";
+    color: rgb(100,100,100);
+    font-size: calc(0.6vh + 1vw);
+}
+.Gram-Content .Gram-Title
+{
+    font-family: "TitleText3";
+    color: black;
+    font-size: calc(0.6vh + 1vw);
+}
+/* #endregion 格莱美 */
+/* #region b榜 */
+.Billboard
+{
+    background-color: white;
+    margin-bottom: 5vh;
+}
+.Billboard .Title
+{
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+.Billboard .Title img
+{
+    height: 80%;
+    max-width: 40%;
+}
+.Billboard .Title .Text
+{
+    font-size: calc(1vh + 5vw);
+    font-family: "TitleText3";
+    color: #2d2d2d;
+}
+.Billboard .ChartBG
+{
+    padding: 5vh 0;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(240,240,240);
+}
+.Billboard .G_chart
+{
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(240,240,240);
+}
+.Billboard .Gram img
+{
+    height: calc(5vh + 4vw);
+}
+.Billboard .Gram
+{
+    margin: calc(2vh + 2vw) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 60%;
+}
+/* #endregion b榜 */
+/* #region Juno */
+.Juno
+{
+    background-color: white;
+}
+.Juno .Title
+{
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+.Juno .Title img
+{
+    height: calc(4vh + 10vw);
+}
+.Juno .Title div
+{
+    font-size: calc(1vh + 5vw);
+    font-family: "TitleText3";
+    color: black;
+}
+.Juno .Gram img
+{
+    height: calc(5vh + 4vw);
+    margin: 0 calc(2vh + 2vw);
+}
+.Juno .Gram
+{
+    margin: calc(2vh + 2vw) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 60%;
+}
+/* #endregion Juno */
+/* #region media */

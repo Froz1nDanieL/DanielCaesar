@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed then Follow</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+        }
+        .box {
+            height: 1100px;
+            background-color: rgb(232, 229, 190);
+        }
+       .r {
+            position: fixed;
+            top: 500px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            color: white;
+            padding: 10px;
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="r">R</div>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            const r = document.querySelector('.r');
+            console.log(window.scrollY);
+            if (window.scrollY > 500) {
+                r.style.position = 'absolute';
+                //r.style.top = window.scrollY + window.innerHeight / 2 + 'px';
+                r.style.top = 500 +500+ 'px';
+            } else {
+                r.style.position = 'fixed';
+                r.style.top = '500px';
+            }
+        });
+    </script>
+</body>
+
+</html>    

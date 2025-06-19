@@ -1,0 +1,186 @@
+/* #region 头部 */
+.BG {
+  background-color: white;
+}
+.Top {
+  width: 100%;
+  background-color: white;
+}
+.Top-Nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8%;
+  background: none;
+  justify-content: space-between;
+  z-index: 100;
+  transition: background-color 0.3s ease-in;
+}
+.Top-Nav.scrolled {
+  background-color: rgb(245, 245, 245);
+  backdrop-filter: blur(5px);
+}
+#TopLogo {
+  margin: 0 calc(1vh + 1vw);
+  width: 20%;
+  font-family: "TitleText1";
+  font-size: calc(1.5vh + 1vw);
+  line-height: 8vh;
+  text-align: center;
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+#TopLogo.scrolled {
+  color: rgb(0, 0, 0);
+}
+.Top-Nav-List {
+  margin: 0 calc(1vh + 1vw);
+  width: 30%;
+  height: 100%;
+  justify-content: space-evenly;
+  background: none;
+}
+.Top-Nav-List li {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#NavText {
+  line-height: calc(0.5vh + 0.4vw);
+  height: auto;
+  font-size: calc(0.5vh + 0.4vw);
+  font-family: "TitleText3";
+  color: white;
+  transition: all 0.3s ease-in;
+  border-bottom: 2px solid transparent;
+}
+#NavText.scrolled {
+  color: rgb(0, 0, 0) !important;
+}
+#NavText.scrolled:hover {
+  border-bottom: 2px solid black;
+}
+#NavText:hover {
+  border-bottom: 2px solid white;
+}
+.Top-Main {
+  position: relative;
+  height: 100vh;
+  background-image: url("./img/Shopbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Top-Over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.TopContent {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  z-index: 20;
+}
+.TopTitle {
+  color: white;
+  text-align: center;
+  font-size: calc(3vh + 5vw);
+  font-family: "TitleText3";
+}
+.TopText {
+  color: white;
+  text-align: center;
+  font-size: calc(1vh + 2vw);
+  font-family: "TitleText2";
+}
+/* #endregion 头部 */
+/* #region 商品 */
+.Goods {
+  margin: 0 auto;
+  width: 80%;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.GoodsContent {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2vh;
+  align-items: start;
+  background-color: white;
+  margin: 5vh 2vw;
+  position: relative;
+}
+
+.GoodsContent img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+  transition: filter 0.3s ease-in;
+}
+
+.GoodsContent .BuyButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: calc(0.8vh + 0.6vw);
+  font-family: "Titletext3";
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.GoodsContent:hover img {
+  filter: blur(5px);
+}
+
+.GoodsContent:hover .BuyButton {
+  opacity: 1;
+}
+.GoodsContent h1 {
+  color: #666;
+  font-size: calc(0.8vh + 0.6vw);
+  font-family: "Titletext3";
+}
+.GoodsContent p {
+  color: #666;
+  font-size: calc(1vh + 0.6vw);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.GoodsIntro {
+  margin-top: 5vh;
+  height: 10vh;
+  color: black;
+  font-family: "TitleText2";
+  letter-spacing: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(4vh + 3vw);
+}
+
+/* #endregion 商品 */

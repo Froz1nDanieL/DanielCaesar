@@ -1,0 +1,302 @@
+  .Top-Nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    background: none;
+    justify-content: space-between;
+    z-index: 100;
+    transition: background-color 0.3s ease-in;
+  }
+  .Top-Nav.scrolled {
+    background-color: rgb(245, 245, 245);
+    backdrop-filter: blur(5px);
+  }
+  #TopLogo {
+    margin: 0 calc(1vh + 1vw);
+    width: 20%;
+    font-family: "TitleText1";
+    font-size: calc(1.5vh + 1vw);
+    line-height: 8vh;
+    text-align: center;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in;
+  }
+  #TopLogo.scrolled {
+    color: rgb(0, 0, 0);
+  }
+  .Top-Nav-List {
+    margin: 0 calc(1vh + 1vw);
+    width: 30%;
+    height: 100%;
+    justify-content: space-evenly;
+    background: none;
+  }
+  .Top-Nav-List li {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #NavText {
+    line-height: calc(0.5vh + 0.4vw);
+    height: auto;
+    font-size: calc(0.5vh + 0.4vw);
+    font-family: "TitleText3";
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in;
+    border-bottom: 2px solid transparent;
+  }
+  #NavText.scrolled {
+    color: rgb(0, 0, 0) !important;
+  }
+  #NavText.scrolled:hover {
+    border-bottom: 2px solid black;
+  }
+  #NavText:hover {
+    border-bottom: 2px solid white;
+  }
+/* Freudian Album Page Styles */
+.BG {
+    background-color: #0a0a0a;
+    background-image: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    min-height: 100vh;
+    color: white;
+}
+
+/* Album Content Styles */
+.AlbumContent {
+    padding: 10vh 5vw 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AlbumTitle {
+    font-family: "TitleText2";
+    font-size: calc(3vh + 2vw);
+    margin-bottom: 5vh;
+    text-align: center;
+    letter-spacing: 0.2vw;
+    color: #f0f0f0;
+}
+
+.AlbumInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.AlbumCover {
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.AlbumCover:hover {
+    transform: scale(1.02);
+}
+
+.AlbumCover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.AlbumDescription {
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 3.5vw;
+    border-radius: 5px;
+}
+
+.AlbumDescription p {
+    font-family: "NormalText";
+    font-size: calc(1vh + 0.5vw);
+    line-height: 1.8;
+    margin-bottom: 4vh;
+}
+
+.AlbumDetails {
+    margin-top: auto;
+    padding-top: 2vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.AlbumDetails p {
+    font-family: "TitleText3";
+    font-size: calc(0.8vh + 0.4vw);
+    margin-bottom: 1vh;
+    color: #cccccc;
+}
+
+/* Tracklist Styles */
+.TracklistSection {
+    margin-top: 8vh;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.TracklistSection::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.SectionTitle {
+    font-family: "TitleText2";
+    font-size: calc(1.5vh + 1.2vw);
+    margin-bottom: 3vh;
+    text-align: left;
+    letter-spacing: 0.15vw;
+    color: #f0f0f0;
+    padding-left: 1.75vw;
+    position: relative;
+}
+
+.SectionTitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.Tracklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Track {
+    display: flex;
+    align-items: center;
+    padding: 1.75vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.Track:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 1.75vw;
+}
+
+.TrackNumber {
+    width: 40px;
+    font-family: "TitleText2";
+    font-size: calc(0.8vh + 0.6vw);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.TrackInfo {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.75vw;
+}
+
+.TrackTitle {
+    font-family: "TitleText2";
+    font-size: calc(0.9vh + 0.7vw);
+    color: #f0f0f0;
+    letter-spacing: 0.1vw;
+}
+
+.TrackDuration {
+    font-family: "NormalText";
+    font-size: calc(0.7vh + 0.5vw);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.TrackPlay {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlayButton {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.Track:hover .PlayButton {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .AlbumInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .AlbumCover, .AlbumDescription {
+        width: 80%;
+    }
+    
+    .AlbumCover {
+        margin-bottom: 5vh;
+    }
+    
+    .TracklistSection {
+        width: 95%;
+    }
+    
+    .SectionTitle {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .SectionTitle::before {
+        display: none;
+    }
+    
+    .Track {
+        padding: 1.4vw;
+    }
+    
+    .Track:hover {
+        padding-left: 1.75vw;
+    }
+    
+    .TrackNumber {
+        width: 30px;
+        font-size: calc(0.7vh + 0.5vw);
+    }
+    
+    .TrackTitle {
+        font-size: calc(0.8vh + 0.6vw);
+    }
+    
+    .TrackDuration {
+        font-size: calc(0.6vh + 0.4vw);
+    }
+} 

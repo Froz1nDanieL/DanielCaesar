@@ -1,0 +1,143 @@
+/*#region 通用*/
+.Flexible
+{
+    display: flex;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+.BG 
+{
+    background-color: rgb(255, 255, 255);
+}
+hr
+{
+    background-color: rgb(100,100,100);
+    border: none;
+    height: 0.3vh;
+    width: 80%;
+    margin: 0 auto;
+}
+  
+/*#endregion 通用*/
+/*#region 字体*/
+@font-face
+{
+    font-family: "NormalText";
+    src: url("./font/bienetresocial-font/Bienetresocial-PKd7.ttf");
+}
+@font-face
+{
+    font-family: "VideoText";
+    src: url("./font/tanach/Tanach.ttf");
+}
+@font-face {
+    font-family: "TitleText1";
+    src: url("./font/Scripto-2OR2v.ttf");
+}
+@font-face {
+    font-family: "MusicText";
+    src: url("./font/hey-august-font/HeyAugust-VGOqe.ttf");
+}
+@font-face {
+    font-family: "TitleText2";
+    src: url("./font/Flokison-WyEXv.otf");
+}
+@font-face {
+    font-family: "TitleText3";
+    src: url("./font/retro-floral/Retro\ Floral.otf");
+}
+@font-face
+{
+    font-family: "btnFont";
+    src: url("./font/BodoniflfBold-MVZx.ttf");
+}
+@font-face
+{
+    font-family: "ShortIntro";
+    src: url("./font/Rushfordclean-rgz89.otf");
+}
+/*#endregion 字体*/
+/* #region 动画 */
+@keyframes fadeIn1 {
+    20% { opacity: 0;filter: blur(5px); }
+    100% { opacity: 0.5;filter: blur(0px); }
+}
+@keyframes fadeIn2 {
+    25% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* #endregion 动画 */
+/* 加载动画遮罩 */
+#global-loader {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.5s cubic-bezier(0.4,0,0.2,1);
+}
+#global-loader.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+#global-loader-logo-text {
+    font-family: 'TitleText1', 'Arial Black', sans-serif;
+    font-size: 72px;
+    color: #111;
+    letter-spacing: 8px;
+    margin-bottom: 48px;
+    text-align: center;
+    user-select: none;
+}
+#global-loader-waves {
+    width: 420px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.loader-wave {
+    width: 100%;
+    height: 16px;
+    overflow: hidden;
+    position: relative;
+}
+.loader-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    stroke: #000;
+    stroke-width: 2.5;
+    fill: none;
+    filter: blur(0.2px);
+}
+.loader-wave .wave-path {
+    stroke-dasharray: 180 320;
+    stroke-dashoffset: 0;
+    animation: wave-move 2.2s linear infinite;
+}
+.loader-wave.wave2 .wave-path {
+    animation-delay: 0.7s;
+    opacity: 0.7;
+}
+.loader-wave.wave3 .wave-path {
+    animation-delay: 1.2s;
+    opacity: 0.5;
+}
+@keyframes wave-move {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -500; }
+}
